@@ -13,7 +13,7 @@ int bs(int arr[],int n,int k)
         }
         else if(k<arr[mid])
         {
-            end=end-1;
+            end=mid-1;
         }
         else 
         {
