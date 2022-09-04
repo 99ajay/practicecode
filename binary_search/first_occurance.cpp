@@ -1,40 +1,36 @@
 #include<iostream>
+#include<stdio.h>
 using namespace std;
-int fo(int arr[],int n,int k)
+struct Node {
+	int a, b;
+	string str;
+};
+int findNumber(int a, int b)
 {
-    int start=0;
-    int end=n-1;
-    int result=-1;
-    while(start<=end)
-    {
-        int mid=start+(end-start)/2;
-        if(k==arr[mid])
-        {
-           result=mid;
-           end=mid-1;
-        }
-        else if(k<arr[mid])
-        {
-            end=mid-1;
-        }
-        else 
-        {
-            start=mid+1;
-        }
-    }
-    return result;
+	queue<Node> q;
+	Node temp = Node{ 0, 0, "" };
+	visited[0][0] = 1;
+	q.push(temp);
+	while (!q.empty()) {
+		Node u = q.front();
+		q.pop();
+		if (u.a == 0 && u.b == b)
+			return std::stoi(u.str);
+		for (int i = 0; i < 10; i++) {
+			int dd = (u.a * 10 + i) % a;
+			int ss = u.b + i;
+			if (ss <= b && !visited[dd][ss]) {
+				visited[dd][ss] = 1;
+				q.push(Node{ dd, ss, u.str + char('0' + i) });
+			}
+		}
+	}
+	return -1;
 }
 int main()
 {
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-    int k;
-    cin>>k;
-    cout<<"first occuranc eof the element is : "<<fo(arr,n,k)<<endl;
+     char string1[100];
+    cin.getline(string1,100);
+    cout<<fo(string1)<<endl;
     return 0;
 }
