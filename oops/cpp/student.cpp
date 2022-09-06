@@ -7,6 +7,10 @@ class student
     int age;
 
     public :
+    ~student()
+    {
+        cout<<"destructor is called now "<<endl;
+    }
     student()//default constructor
     {
       cout<<"default constructor"<<endl;
