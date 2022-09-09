@@ -101,6 +101,18 @@ public class Main {
                 return this.tail.data;
             }
         }
+
+        int getat(int idx) {
+
+        }
+
+        void removeat(int idx) {
+
+        }
+
+        void addat(int idx) {
+
+        }
     }
 
     public static void main(String[] args) {
