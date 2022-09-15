@@ -6,7 +6,7 @@ class vehicle
         int numtyres;
     public :
         string color;
-    vehicle()
+    vehicle()  //if we hide this then when we call car class constructor then showing the error here .
     {
         cout<<"vehicle's default constructor is called "<<endl;
 

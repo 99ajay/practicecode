@@ -3,9 +3,10 @@
 class car :  public vehicle{
  public :
     int numgears;
-    car() : vehicle(6)
+    car(int x,int y) : vehicle(x)//if we want to call parameterised constructor of vehicle class then we write as like else default constructor is called
     {
         cout<<"car's constructor is called "<<endl;
+        numgears=y;
     }
     ~car()
     {
