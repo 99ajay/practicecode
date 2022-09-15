@@ -5,6 +5,7 @@ class Bus
     public :
         void print();
 };
+void test();
 class Truck{
     private:
         int x;
@@ -13,6 +14,7 @@ class Truck{
     public:
         int z;
     friend void Bus :: print();
+    friend void test();
 };
 
 void Bus :: print()
@@ -24,8 +26,19 @@ void Bus :: print()
 }
 
 
+void test()
+{
+    //access truck private
+      Truck t;
+    t.x=10;
+    t.y=20;
+    cout<<t.x<<" "<<t.y<<endl;
+}
+
+
 int main()
 {
   Bus b;
   b.print();
+  test();
 }
