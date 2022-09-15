@@ -13,8 +13,9 @@ class Truck{
         int y;
     public:
         int z;
-    friend void Bus :: print();
-    friend void test();
+    // friend void Bus :: print();
+    // friend void test();
+    friend class Bus;
 };
 
 void Bus :: print()
