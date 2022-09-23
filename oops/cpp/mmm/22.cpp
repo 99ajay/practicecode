@@ -3,7 +3,7 @@ using namespace std;
 void compute(char str[])
 {
     int x;
-    int i=0;
+    int i;
     int a[26];
     for(int i=0;i<26;i++)
     {

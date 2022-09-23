@@ -19,7 +19,7 @@ public class Four {
         // }
         // System.out.println();
         // }
-        System.out.println(xpro(128));
+        System.out.println(xpro(18));
         // output 18
 
     }

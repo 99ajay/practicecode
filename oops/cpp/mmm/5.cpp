@@ -22,6 +22,7 @@ int main()
         for(c=0;c<8;c++)
         {
             sum=sum+table[r][c];
+            cout<<sum<<" ";
         }
     }
     cout<<sum<<endl;//1717077685
