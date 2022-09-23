@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Four {
     public static boolean xpro(int a) {
         return a == 2 * (a / 10 + a % 10);
     }
