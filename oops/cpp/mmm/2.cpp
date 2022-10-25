@@ -11,5 +11,5 @@ int main()
 {
   int i=5;
   int j=7;
-  fun(i,j);
+  fun(i,j);//75
 }
