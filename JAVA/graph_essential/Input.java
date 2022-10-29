@@ -13,6 +13,22 @@ public class Input {
 
     }
 
+    public static boolean haspath(ArrayList<Pair>[] graph, int vtx, int de, boolean vis[]) {
+        if (vtx == de) {
+            return true;
+        }
+        vis[vtx] = true;
+        for (Pair e : graph[vtx]) {
+            if (vis[e.dest] == false) {
+                boolean res = haspath(graph, e.dest, de, vis);
+                if (res) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int nvtses = scn.nextInt();
@@ -34,6 +50,8 @@ public class Input {
                 System.out.println(e.src + "->" + e.dest);
             }
         }
+
+        System.out.println(haspath(graph, 0, 6, new boolean[nvtses]));
 
     }
 }
